@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+}
+.todo-main{
+    
+    margin: 10% auto 0 auto;
+    /* border: 5px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+   
+}
+
+.addedItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
