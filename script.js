@@ -7,10 +7,8 @@ document.querySelector(".add-item").addEventListener("click", () => {
 document.querySelector(".delete-items").addEventListener("click", () => {
     deleteCompleted()
 })
-
-document.querySelector(".active-items").addEventListener("click", () =>{
     leaveActive()
-})
+
 
 
 function createNewElement() {
@@ -33,14 +31,10 @@ function createNewElement() {
 
     document.querySelectorAll(".addedItem").forEach(element => {
         element.append(newCheckBox)
-        element.append(newElementInside)
-        
+        element.append(newElementInside)     
     });
-
-
     newElementInside.className = "addedItemText";
     newElementInside.innerHTML = document.getElementById("todo-input").value; 
-
 }
 
 
@@ -56,15 +50,16 @@ function leaveActive(){
     document.querySelectorAll(".sort-buttons input").forEach(element=> {
        element.onclick = function() {
     if(element.className === "all-items"){
-       alert("all")
        document.querySelectorAll(".addedItem").forEach(element => element.style.display = 'flex')
     } else if (element.className === "active-items") {
+        document.querySelectorAll(".addedItem").forEach(element => element.style.display = 'flex')
         document.querySelectorAll(".doneTaskCheck").forEach((element, index) =>{
             if(element.checked){
                 document.querySelectorAll(".addedItem")[index].style.display = 'none'
             }
         })
     } else if (element.className === "completed-items") {
+        document.querySelectorAll(".addedItem").forEach(element => element.style.display = 'flex')
         document.querySelectorAll(".doneTaskCheck").forEach((element, index) =>{
             if(!element.checked){
                 document.querySelectorAll(".addedItem")[index].style.display = 'none'
