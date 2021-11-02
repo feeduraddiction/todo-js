@@ -53,8 +53,25 @@ function deleteCompleted() {
 }
 
 function leaveActive(){
-    document.querySelectorAll("addedItem").forEach(element=>{
-       return element.checked?element.hidden=true:element.hidden=false;
+    document.querySelectorAll(".sort-buttons input").forEach(element=> {
+       element.onclick = function() {
+    if(element.className === "all-items"){
+       alert("all")
+       document.querySelectorAll(".addedItem").forEach(element => element.style.display = 'flex')
+    } else if (element.className === "active-items") {
+        document.querySelectorAll(".doneTaskCheck").forEach((element, index) =>{
+            if(element.checked){
+                document.querySelectorAll(".addedItem")[index].style.display = 'none'
+            }
+        })
+    } else if (element.className === "completed-items") {
+        document.querySelectorAll(".doneTaskCheck").forEach((element, index) =>{
+            if(!element.checked){
+                document.querySelectorAll(".addedItem")[index].style.display = 'none'
+            }
+        })
+    }
+    }
     })
 }
 
