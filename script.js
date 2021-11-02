@@ -13,7 +13,7 @@ document.querySelector(".delete-items").addEventListener("click", () => {
 
 function createNewElement() {
 
-    //create new elements
+    //create new elements       
     let newElement = document.createElement("div");
     let newElementInside = document.createElement("div");
     let newCheckBox = document.createElement("input");
