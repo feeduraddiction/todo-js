@@ -15,11 +15,18 @@ document.querySelector(".delete-items").addEventListener("click", () => {
   appearActionBtns();
 });
 
-g
+
 leaveActive();
 
 
 function createNewElement() {
+
+  if(document.querySelector(".input input").value.match(/^\s+$|^$/gi)){
+    document.querySelector(".input input").classList.add("error-border")
+    return
+  } else {
+    document.querySelector(".input input").classList.remove("error-border")
+  }
   //create new elements
   let newElement = document.createElement("div");
   let newElementInside = document.createElement("div");
@@ -42,6 +49,7 @@ function createNewElement() {
   newElementInside.className = "addedItemText";
   newElementInside.innerHTML = document.getElementById("todo-input").value;
   document.querySelector(".input input").value = "";
+
 }
 
 function deleteCompleted() {

@@ -6,6 +6,7 @@
 
 body{
     display: flex;
+    
 }
 
 .todo-main h1 {
@@ -84,6 +85,7 @@ input[type="text"] {
 .addedItemText{
     font-size: 36px;
     margin-left: 25px;
+    font-family: "Roboto", sans-serif;
 }
 
 .doneTaskCheck{
@@ -128,4 +130,10 @@ input[type="text"] {
     border:1px solid #000;
     transition: 0.4s ease;
     
+}
+
+.error-border{
+    border: none;
+    border-bottom: 1px solid red !important;
+    transition: 0.4s ease;
 }
