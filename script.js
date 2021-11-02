@@ -21,6 +21,8 @@ document.querySelector(".delete-items").addEventListener("click", () => {
 })
     leaveActive()
 
+
+
    
     
 
@@ -47,7 +49,8 @@ function createNewElement() {
         element.append(newElementInside)     
     });
     newElementInside.className = "addedItemText";
-    newElementInside.innerHTML = document.getElementById("todo-input").value; 
+    newElementInside.innerHTML = document.getElementById("todo-input").value;
+    document.querySelector(".input input").value = "";
 }
 
 
