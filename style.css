@@ -16,15 +16,45 @@ body{
 }
 
 input[type="text"] {
-    font-size: 44px;
-    color: #5A6B70;
+    font-size: 36px;
+    padding-left: 30px;
 }
 
 .input input {
     width: 350px;
     height: 60px;
+    outline:none;
     border: none;
-    box-shadow:  10px 5px 5px rgba(0,0,0 0.5);
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+    border-radius: 2px;
+ }
+
+ .input-todo-list-container{
+    
+ }
+
+ 
+  .input input::placeholder{
+      color: #C8C6CF;
+  }
+
+  .add-item {
+     font-size: 41px;
+     padding: 5px 8px 5px 8px;
+     border: none;
+     background-color: transparent;
+     Color: #8e9497;
+     transition: 0.2s ease;
+  }
+
+  .add-item:hover{
+      color: #000;
+      transition: 0.2s ease;
+  }
+
+ .input {
+   display: flex;
+   flex-direction: row;
  }
 .todo-main{
     
@@ -36,7 +66,7 @@ input[type="text"] {
     align-items: center;
 }
 .todo-list{
-   
+    box-shadow: 0px 10px 15px rgba(0,0,0, 0.1);
 }
 
 .addedItem {
@@ -44,4 +74,43 @@ input[type="text"] {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    width: 350px;
+    height: 60px;
+    border-bottom: 1px solid rgba(0,0,0, 0.1); 
+}
+
+
+.action-buttons{
+    margin-top: 50px;
+    opacity: 0;
+}
+
+.sort-buttons {
+    height: 80px;
+    /* border: 5px solid red; */
+    width:410px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort-buttons label{
+    font-size: 18px;
+    color: #8e9497;
+}
+
+
+.delete-items{
+    font-size: 18px;
+    border: 1px solid rgba(0,0,0, 0.1);
+    background-color: transparent;
+    height: 45px;
+    transition: 0.4s ease;
+    border-radius: 10px;
+}
+
+.delete-items:hover{
+    border:1px solid #000;
+    transition: 0.4s ease;
+    
 }

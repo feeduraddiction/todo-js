@@ -2,14 +2,27 @@
 
 document.querySelector(".add-item").addEventListener("click", () => {
     createNewElement()
+    appearActionBtns()
+  
+})
+
+document.querySelector(".input input").addEventListener("keyup", (event) =>{
+    
+    if(event.keyCode === 13)
+    {
+        createNewElement();
+        appearActionBtns()
+    }
 })
 
 document.querySelector(".delete-items").addEventListener("click", () => {
     deleteCompleted()
+    appearActionBtns()
 })
     leaveActive()
 
-
+   
+    
 
 function createNewElement() {
 
@@ -69,6 +82,13 @@ function leaveActive(){
     }
     })
 }
+
+function appearActionBtns(){
+        document.querySelectorAll(".addedItem").length > 0 ? document.querySelector(".action-buttons").style.opacity = "1" : document.querySelector(".action-buttons").style.opacity = "0";
+}
+
+
+
 
 
 
